@@ -4,9 +4,6 @@ class Book extends Publication{                               //questo codice di
 //this fa riferimento all'oggetto che stiamo costruendo
         super(title, dop, publisher);                           //scrivendo questo sto dicendo che Book si deve gestire solo il parametro che non eredita da Publication, vale a dire author
         this.author = author;
-        
-
-
 
     }
 
@@ -27,8 +24,5 @@ class Book extends Publication{                               //questo codice di
     //    const upperTitle = this.title.toUpperCase();
     //    return upperTitle; 
     //}
-
-
-
 
 }

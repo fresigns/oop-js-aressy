@@ -6,9 +6,7 @@ class Schoolbook extends Book{
 
         this.subject = subject;
         this.grade = grade;
-
     }
-
 
     toString() {                                                     
         const card = super.toString() +
@@ -16,10 +14,6 @@ class Schoolbook extends Book{
                      'Classe: ' + this.grade + '\n';
         return card;
     }
-
-
-
-
 
 }
 
