@@ -3,9 +3,8 @@
 class GUI{
     constructor(){
 
-        this.library = new Library();
-        
         this.storage = new Storage();
+        this.library = new Library();
 
         const data = this.storage.loadData();
         // console.log(data);
@@ -15,9 +14,9 @@ class GUI{
     //     }
     // }
 
-    if (data !== null) {
-        this.library.fromDbObjects(data);
-    }
+        if (data !== null) {
+            this.library.fromDbObjects(data);
+        }
 }
 
 // ----------------------------
@@ -69,6 +68,7 @@ class GUI{
         // console.log(allBooks);
         alert(allBooks);
     }
+
 // second choice
     insertBook(){
         const title = prompt('inserisci il titolo del libro');
@@ -81,17 +81,17 @@ class GUI{
         this.library.addPublication(book);
         // console.log(this.library);
 
-        this.storage.saveData(this.library.publications); // salvo ogni cambiamento dello stato dei miei dati
+        this.storage.saveData(this.library.publications); 
+        // salvo ogni cambiamento dello stato dei miei dati
     }
+
 // third choice
     deleteBooks(){
         const humanIndex = prompt('Inserisci il numero del libro da eliminare');
         const index = humanIndex -1;
         this.library.deletePublication(index);
 
-        this.storage.saveData(this.library.publications); // ogni volta che cambia qualcosa aggiorno la mia library
+        this.storage.saveData(this.library.publications); 
+        // ogni volta che cambia qualcosa aggiorno la mia library
     }
-} // fine class GUI
-
-
-// storage -----------------
+} 

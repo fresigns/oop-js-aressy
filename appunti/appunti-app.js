@@ -83,12 +83,21 @@ const schoolbook1 = new Schoolbook('Storia storica', 'Ermanno Storioni', '31/12/
 // ------------------------------------------------------------
 
 // ------------------------------------------------------------
-// Poter gestire gli stessi elementi di tipi diversi dentro lo stesso array (POLIMORFIA)
-const libraryCollection = [book2, book3, schoolbook1, magazine1];     
+// Poter gestire gli stessi elementi di tipi diversi dentro lo stesso array
+const libraryCollection = [book2, book3, schoolbook1, magazine1];     //questo array non contiene elementi di tipo diverso, in verità. 
+                                                                      //Perché hanno tutti un parente comune (Publication). Quindi è come se JS li leggesse tutti come delle publication. 
+                                                                      //questa si chiama POLIMORFIA
+
 
 // for (const pub of libraryCollection) {
 //      console.log(pub.toString());
 // }                                                                
+
+// quando faccio il toString, ognuno fa il suo. 
+// Anche se prima erano tendenzialmente tutte publications
+// mettiamo di voler cambiare le date e non gestirle più come delle stringhe, 
+// bensì come dei numeri. Siccome Publication li determina tutti, 
+// posso cambiare solo lui e a cascata cambia tutto
 
 // ------------------------------------------------------------
 
@@ -107,7 +116,7 @@ const gui = new GUI();
 gui.start();
 
 // ------------------------------------------------------------
-// JSON ------------------------------------ formato di stringa
+// JSON -------------------------------------------------------
 
 // JavaScript Object Notation: strutture dati traducibili in stringa
 
@@ -117,36 +126,35 @@ gui.start();
 //     isMarried: false
 // }
 
-// // -------------------------------------------
 // console.log(student1);
 
 // const student1JSON = JSON.stringify(student1);
-// // //                        stringify trasforma in stringa
+// //                        stringify trasforma in stringa
 
 // console.log(student1JSON);
-// // // stringa che si porta dietro solo le proprietà
+// // stringa che si porta dietro solo le proprietà
+
+
 
 // const stringArray = ['qui', 'quo', 'qua'];
-
-// const stringArrayJSON = JSON.stringify(stringArray);
-
+// const stringArrayJSON = JSON.stringify(studentArray);
 // console.log(stringArrayJSON);
-// // -------------------------------------------
+
+// -------------------------------------------
 // const student2 = {
 //     name: 'francesca',
 //     yob: 1989,
 //     isMarried: false
 // }
 
+// console.log(student2);
+
 // const studentArray = [student1, student2];
 
 // const studentArrayJSON = JSON.stringify(studentArray);
-
 // console.log(studentArrayJSON);
-
 
 // const jsonString = '[{"name":"bryan","yob":1994,"isMarried":false},{"name":"francesca","yob":1989,"isMarried":false}]'
 
-// const studentArray = JSON.parse(jsonString);
-
+// const studentArray = JSON.parse(jsonSTring);
 // console.log(studentArray);

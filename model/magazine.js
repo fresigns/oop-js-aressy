@@ -2,23 +2,13 @@ class Magazine extends Publication{
 
     constructor(title, dop, publisher, issue){
 
-        super (title, dop, publisher)   //super chiama il costruttore della classe genitore
+        super (title, dop, publisher);   // passa le proprietà di Publication
         this.issue = issue;
-
-
     }
 
     toString() {                                                     
         const card = super.toString() +
-                     'Numero uscita: ' + this.issue + '\n';       //ho lasciato solamente le cose uniche di Magazine e ho fatto fare il resto al super
+                'Numero uscita: ' + this.issue + '\n';
         return card;
     }
-
-
-   //getUpperTitle(){
-   //    const upperTitle = this.title.toUpperCase();
-   //    return upperTitle; 
-   //}
-
-
 }

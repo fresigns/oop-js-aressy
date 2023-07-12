@@ -3,7 +3,6 @@ class Schoolbook extends Book{
     constructor(title, author, dop, publisher, subject, grade){
 
         super (title, author, dop, publisher);
-
         this.subject = subject;
         this.grade = grade;
     }
@@ -14,7 +13,4 @@ class Schoolbook extends Book{
                      'Classe: ' + this.grade + '\n';
         return card;
     }
-
 }
-
-//Schoolbook avrà materia e classe (3 media, superiori ecc.)
